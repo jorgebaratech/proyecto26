@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestiondepedidos.controllers.VentanaPedidoController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Cerrar sesión" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <BorderPane prefWidth="826.0">
+         <center>
+            <TableView fx:id="tablapedidos" prefHeight="364.0" prefWidth="826.0">
+              <columns>
+                  <TableColumn fx:id="idpedidos" prefWidth="157.0" text="ID" />
+                <TableColumn fx:id="pedidopedidos" prefWidth="162.0" text="Código" />
+                <TableColumn fx:id="cantidadpedidos" prefWidth="191.0" text="Cantidad" />
+                  <TableColumn fx:id="productopedidos" prefWidth="315.0" text="Producto" />
+              </columns>
+            </TableView>
+         </center>
+         <top>
+            <HBox spacing="220.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="69.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/nutria.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Detalles del pedido">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="40.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</VBox>
